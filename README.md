@@ -47,11 +47,11 @@ Soon to be updated
 ## Versioning
 Soon to be updated
 
-##Authors
+## Authors
 Chi Mai - initial work and design
 
-##License
+## License
 This project is licensed under the ISC License
 
-##Acknowledgments
+## Acknowledgments
 The Internet
