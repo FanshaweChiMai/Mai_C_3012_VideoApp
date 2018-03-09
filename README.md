@@ -4,14 +4,14 @@ An amateur attempt to create a video streaming app like Netflix.
 ## Getting Started
 Clone or download master branch to your destination of choice
 
-###Prerequisites
+### Prerequisites
 This project requires npm, nodeJS, express, express generator, and handlebars
 Install by npm
 
 $ npm install --save express
 
 
-###Installing
+### Installing
 Go to the folder, install all node modules
 
 $ npm install
@@ -24,27 +24,27 @@ Install handlebars
 
 $ npm install --save express-handlebars
 
-##Running the tests
+## Running the tests
 Soon to be updated
 
-###Break down into end to end tests
+### Break down into end to end tests
 Soon to be updated
 
-###And coding style tests
+### And coding style tests
 Soon to be updated
 
-##Deployment
+## Deployment
 Soon to be updated
 
-##Built With
+## Built With
 nodeJS - framework
 express -
 express-handlebars -
 
-##Contributing
+## Contributing
 Soon to be updated
 
-##Versioning
+## Versioning
 Soon to be updated
 
 ##Authors
