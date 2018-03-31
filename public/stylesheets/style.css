@@ -1,8 +1,26 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
-a {
-  color: #00B7FF;
+body{
+  margin : 50px;
+  background-color: black;
+}
+.wrapper {
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+  background-color: blue;
+}
+
+.mainHead {
+  font-family: Arial;
+  color: red;
+  margin: 0 auto;
+}
+
+.rightNav{
+  float: right;
 }

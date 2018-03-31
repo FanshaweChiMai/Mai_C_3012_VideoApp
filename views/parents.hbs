@@ -1,6 +1,27 @@
-<h1>{{ title }}</h1>
-<p>Welcome to {{ title}}</p>
-{{#each parents}}
-<a href="/videoparents/{{index_id}}">
-<img src="{{index_images}}" alt=""></a>
-{{/each}}
+<div class="wrapper">
+  <h1 class="mainHead">{{mainheading}}</h1>
+  <ul class="rightNav">
+    <li><a href="#"> <img src="/images/member.png" alt=""> </a></li>
+    <li><a href="#"> <img src="/images/menu.png" alt=""> </a></li>
+    <li><a href="#"> <img src="/images/setting.png" alt=""> </a></li>
+  </ul>
+
+  <h2>{{ tilte }}</h2>
+  <p>{{intro}}</p>
+  {{#each parents}}
+  <a href="/videoparents/{{index_id}}">
+  <img src="{{index_images}}" alt=""></a>
+  {{/each}}
+
+  <footer>
+    <h1 class="mainHead">{{mainheading}}</h1>
+    <ul class="rightFooter">
+      <li> <a href="#"> <img src="images/fb.png" alt=""> </a> </li>
+      <li> <a href="#"> <img src="images/twt.png" alt=""> </a> </li>
+      <li> <a href="#"> <img src="images/yt.png" alt=""> </a> </li>
+    </ul>
+    <a href="#">Terms of Use</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">2017 All Rights Reserved</a>
+  </footer>
+</div>

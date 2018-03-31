@@ -1,6 +1,53 @@
-<h1>{{ title }}</h1>
-<p>Welcome to {{ title}}</p>
-{{#each index}}
-<a href="/videos/{{index_id}}">
-<img src="{{index_images}}" alt=""></a>
-{{/each}}
+<div class="wrapper">
+  <h1 class="mainHead">{{mainheading}}</h1>
+  <ul class="rightNav">
+    <li><a href="#"> <img src="/images/member.png" alt=""> </a></li>
+    <li><a href="#"> <img src="/images/menu.png" alt=""> </a></li>
+    <li><a href="#"> <img src="/images/setting.png" alt=""> </a></li>
+  </ul>
+<div class="controlMedia">
+  <p>{{intro}}</p>
+  <ul>
+    <li>
+      <a href="/views/parents.hbs"> <img src="/images/movies.png" alt=""> </a>
+      <p>{{lorem}}</p>
+      <button type="button" name="button">CLICK</button>
+     </li>
+    <li> <a href="#"> <img src="/images/tv.png" alt=""> </a>
+      <p>{{lorem}}</p>
+      <button type="button" name="button">CLICK</button> </li>
+    <li> <a href="#"> <img src="/images/music.png" alt=""> </a>
+      <p>{{lorem}}</p>
+      <button type="button" name="button">CLICK</button> </li>
+  </ul>
+</div>
+<div class="selectAcc">
+  <ul>
+    <li> <a href="parents.hbs"> <img src="images/parents.jpg" alt=""> </a> </li>
+    <li> <a href="kids.hbs"> <img src="images/kids.jpg" alt=""> </a> </li>
+  </ul>
+
+</div>
+<div class="services">
+  <h6>SERVICES</h6>
+  <p>{{servicesDesc}}</p>
+  <ul>
+    <li> <a href="#"> <img src="images/ser1.jpg" alt=""> </a> </li>
+    <li> <a href="#"> <img src="images/ser2.jpg" alt=""> </a> </li>
+    <li> <a href="#"> <img src="images/ser3.jpg" alt=""> </a> </li>
+    <li> <a href="#"> <img src="images/ser4.jpg" alt=""> </a> </li>
+    <li> <a href="#"> <img src="images/ser5.jpg" alt=""> </a> </li>
+  </ul>
+</div>
+<footer>
+  <h1 class="mainHead">{{mainheading}}</h1>
+  <ul class="rightFooter">
+    <li> <a href="#"> <img src="images/fb.png" alt=""> </a> </li>
+    <li> <a href="#"> <img src="images/twt.png" alt=""> </a> </li>
+    <li> <a href="#"> <img src="images/yt.png" alt=""> </a> </li>
+  </ul>
+  <a href="#">Terms of Use</a>
+  <a href="#">Privacy Policy</a>
+  <a href="#">2017 All Rights Reserved</a>
+</footer>
+</div>
