@@ -1,26 +1,27 @@
-<div class="wrapper">
-  <h1 class="mainHead">{{mainheading}}</h1>
-  <ul class="rightNav">
-    <li><a href="#"> <img src="/images/member.png" alt=""> </a></li>
-    <li><a href="#"> <img src="/images/menu.png" alt=""> </a></li>
-    <li><a href="#"> <img src="/images/setting.png" alt=""> </a></li>
-  </ul>
+<div class="kidsUI">
+<div class="selectEnt">
+  <ul>
+    <li><a href="#"> <img src="/images/assets/kmovie.png" alt=""> </a></li>
+    <li><a href="#"> <img src="/images/assets/ktv.png" alt=""> </a></li>
+    <li>  <a href="#"> <img src="/images/assets/kmusic.png" alt=""> </a></li>
+  </ul>  
+</div>
 
-  <h2>{{ tilte }}</h2>
-  <p>{{intro}}</p>
-{{#each kids}}
-<a href="/videokids/{{index_id}}">
-<img src="{{index_images}}" alt=""></a>
-{{/each}}
-<footer>
-  <h1 class="mainHead">{{mainheading}}</h1>
-  <ul class="rightFooter">
-    <li> <a href="#"> <img src="images/fb.png" alt=""> </a> </li>
-    <li> <a href="#"> <img src="images/twt.png" alt=""> </a> </li>
-    <li> <a href="#"> <img src="images/yt.png" alt=""> </a> </li>
-  </ul>
-  <a href="#">Terms of Use</a>
-  <a href="#">Privacy Policy</a>
-  <a href="#">2017 All Rights Reserved</a>
-</footer>
+  <h2>{{ title }}</h2>
+    <p>{{intro}}</p>
+    <div class="kmovieList">
+      {{#each kids}}
+      <a href="/kidsvideos/{{kids_id}}">
+      <img class="kImg" src="{{kids_images}}" alt=""></a>
+      {{/each}}
+</div>
+<div class="otherCat">
+  <a href="#"> <img src="/images/assets/comedy.png" alt=""> </a>
+  <a href="#"> <img src="/images/assets/adventure.png" alt=""> </a>
+  <a href="#"> <img src="/images/assets/sports.png" alt=""> </a>
+  <a href="#"> <img src="/images/assets/educational.png" alt=""> </a>
+  <a href="#"> <img src="/images/assets/serious.png" alt=""> </a>
+  <a href="#"> <img src="/images/assets/favourites.png" alt=""> </a>
+
+</div>
 </div>

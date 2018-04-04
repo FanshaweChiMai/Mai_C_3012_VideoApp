@@ -1,5 +1,9 @@
-{{#each index}}
-<video controls src="/{{index_videos}}">
-
+{{#each videos}}<h2>{{parents_title}}</h2>{{/each}}
+<video controls autoplay>
+{{#each videos}}
+  <source src="/{{parents_videos}}" type="video/mp4">
+    {{/each}}
 </video>
+{{#each videos}}
+<p class="moviePlot">{{parents_desc}}</p>
 {{/each}}

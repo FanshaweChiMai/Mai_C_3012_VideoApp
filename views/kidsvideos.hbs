@@ -1,0 +1,10 @@
+{{#each kidsvideos}}<h2>{{kids_title}}</h2>{{/each}}
+
+<video controls autoplay>
+{{#each kidsvideos}}
+  <source src="/{{kids_videos}}" type="video/mp4">
+    {{/each}}
+</video>
+{{#each kidsvideos}}
+<p class="moviePlot">{{kids_desc}}</p>
+{{/each}}
