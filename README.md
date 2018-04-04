@@ -24,28 +24,20 @@ Install handlebars
 
 $ npm install --save express-handlebars
 
-## Running the tests
-Soon to be updated
+## External Files to Download
 
-### Break down into end to end tests
-Soon to be updated
+https://drive.google.com/drive/folders/19J3QhE62j2-oPEyFqqr8LDXVxlrLbGMd?usp=sharing
 
-### And coding style tests
-Soon to be updated
-
-## Deployment
-Soon to be updated
-
+Please download videoparents and videokids into public folder
 ## Built With
 nodeJS - framework
 express -
 express-handlebars -
 
 ## Contributing
-Soon to be updated
+IMDB and Google Drive for all the movie info
 
-## Versioning
-Soon to be updated
+
 
 ## Authors
 Chi Mai - initial work and design
