@@ -1,6 +1,9 @@
 # Mai_C_3012_VideoApp
 An amateur attempt to create a video streaming app like Netflix.
 
+Update 1.0 : It's not fun when you're working on the app and the computer decided to be completely dead without any notice.
+Update 1.1 : Re-doing all the VueJS and database because... computer was reset back to 0. All files are gone. Life happens. 
+
 ## Getting Started
 Clone or download master branch to your destination of choice
 
@@ -16,7 +19,7 @@ Go to the folder, install all node modules
 
 $ npm install
 
-Install express and express-hand
+Install express
 
 $ npm install --save express
 
@@ -33,6 +36,8 @@ Please download videoparents and videokids into public folder
 nodeJS - framework
 express -
 express-handlebars -
+vueJS
+
 
 ## Contributing
 IMDB and Google Drive for all the movie info
