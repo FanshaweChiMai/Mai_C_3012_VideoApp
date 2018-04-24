@@ -1,10 +1,10 @@
-<section id="video" class="parentsUI">
+<section id="video" class="kidsUI">
   <div>
     <h2>{{ intro }}</h2>
 
 
     <video autoplay controls>
-      <source src="/videoparents/{{ moviesrc }}" type="video/mp4">
+      <source src="/videokids/{{ moviesrc }}" type="video/mp4">
     </video>
 
   </div>
@@ -33,14 +33,14 @@
 
   <div id="ss">
   <social-sharing url="{{window.location.href}}"
-  title="Movies from the Oldies are still Goldies"
-  description="Check out the trailers and share them around!"
-  quote="Flashback to good ol' times"
-  hashtags="roku, flashback, movies, trailers, fun, family"
-  twitter-user="RokuFlashback"
-  facebookurl="{{url}}"
-  :networks="overriddenNetworks"
-  v-cloak inline-template>
+    		                      title="Movies from the Oldies are still Goldies"
+    		                      description="Check out the trailers and share them around!"
+    		                      quote="Flashback to good ol' times"
+    		                      hashtags="roku, flashback, movies, trailers, fun, family"
+    		                      twitter-user="RokuFlashback"
+                              facebookurl="{{url}}"
+    		                      :networks="overriddenNetworks"
+    		                      v-cloak inline-template>
     		<ul>
     			<li>
     				<network network="facebook" id="facebook">

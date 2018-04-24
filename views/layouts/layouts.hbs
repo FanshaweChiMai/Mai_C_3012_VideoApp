@@ -60,6 +60,10 @@
     }
   </script>
 {{/if}}
+{{#if parents}}
+<script src="/js/main.js"></script>
+{{/if}}
+
 {{#if kids}}
 <script>
 	var appkData = {
@@ -67,16 +71,22 @@
 	}
 </script>
 {{/if}}
-  	<script src="/js/main.js"></script>
+{{#if kids}}
+<script src="/js/kids.js"></script>
+{{/if}}
 
 	{{#if videos}}
+		<script src="/js/videoVM.js"></script>
+	{{/if}}
+
+	{{#if kidsvideos}}
 		<script src="/js/videoVM.js"></script>
 	{{/if}}
 
 	<script>
 	      Vue.use(SocialSharing);
 	      new Vue({
-	        el: '#sm',
+	        el: '#ss',
 	        data: {
 	          overriddenNetworks: {
 	            "test": {

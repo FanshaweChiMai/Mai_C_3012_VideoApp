@@ -26,7 +26,7 @@ const pApp = {
   })
 }
 
-pApp.movieGenres(appData.parents, ["Action", "Adventure", "Drama", "Historical", "Science-Fiction", "Thriller"]);
+pApp.movieGenres(appData.parents, ["Action", "Adventure", "Drama"]);
 
 
 const kApp = {

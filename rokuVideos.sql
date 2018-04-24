@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 24, 2018 at 02:02 AM
+-- Generation Time: Apr 24, 2018 at 03:46 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -52,19 +52,24 @@ CREATE TABLE `tbl_comments` (
 --
 
 INSERT INTO `tbl_comments` (`comments_id`, `comments_auth`, `comments_copy`, `comments_date`, `comments_movie`, `comments_rating`) VALUES
-(1, NULL, 'Loved it. Chris Pratt is my hero! I LOVE YOU STAR LORD!!', '2018-03-26 19:08:41', 1, 5),
-(2, NULL, 'Not quite as good as the first Guardians, but still WAY better that any DC movie... ', '2018-03-26 19:09:57', 1, 4),
-(3, NULL, 'It sucked.', '2018-04-01 14:54:32', 1, 1),
-(4, NULL, 'It was amazing. I really liked this way better than any DC movie that\'s ever been made, EVER.\n\nCuz DC movies are garbage.', '2018-04-01 14:55:29', 1, 3),
-(5, NULL, 'I thought Logan was great.THIS is the way you do comic book dystopia.', '2018-04-01 14:56:55', 3, 4),
-(6, NULL, 'Way too violent. I thought Hugh Jackman would at least do a song and dance, but was VERY disappointed.', '2018-04-01 14:57:35', 3, 1),
-(7, NULL, 'OMG i can\'t get enough Deadpool.. what a great movie', '2018-04-01 15:11:30', 7, 5),
-(8, NULL, 'I really liked this. Prof X made me sad tho. What a way to go...', '2018-04-01 15:51:58', 3, 4),
+(1, NULL, 'Amazing Movie! ', '2018-03-26 19:08:41', 1, 5),
+(2, NULL, 'what?', '2018-03-26 19:09:57', 2, 4),
+(3, NULL, 'It sucked.', '2018-04-01 14:54:32', 3, 1),
+(4, NULL, 'EH!', '2018-04-01 14:55:29', 4, 3),
+(5, NULL, 'Cool one!', '2018-04-01 14:56:55', 3, 4),
+(6, NULL, 'Mehhhhh', '2018-04-01 14:57:35', 3, 1),
+(7, NULL, 'yesssss', '2018-04-01 15:11:30', 7, 5),
+(8, NULL, 'Waste of money', '2018-04-01 15:51:58', 3, 4),
 (9, NULL, 'Amazing', '2018-04-19 23:12:10', 2, 4),
 (10, NULL, 'NOOOOOOO', '2018-04-23 21:54:58', 1, 3),
 (11, NULL, 'NOOOOOOOOO ', '2018-04-23 21:56:22', 1, 3),
 (12, NULL, 'yessss', '2018-04-23 22:02:51', 1, 4),
-(13, NULL, 'lkiinefdrgrd', '2018-04-23 22:27:37', 1, 3);
+(13, NULL, 'lkiinefdrgrd', '2018-04-23 22:27:37', 1, 3),
+(14, NULL, 'Perfect!', '2018-04-24 15:12:50', 5, 5),
+(15, NULL, 'gngrgiiger', '2018-04-24 15:14:46', 5, 3),
+(16, NULL, 'HellO!', '2018-04-24 15:18:27', 2, 3),
+(17, NULL, 'Funniest thing ever!', '2018-04-24 15:42:44', 7, 5),
+(18, NULL, 'Smart and funny!\n', '2018-04-24 15:43:26', 7, 5);
 
 -- --------------------------------------------------------
 
@@ -139,6 +144,28 @@ INSERT INTO `tbl_genre` (`genre_id`, `genre_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_kcomments`
+--
+
+CREATE TABLE `tbl_kcomments` (
+  `comments_id` int(10) UNSIGNED NOT NULL,
+  `comments_auth` varchar(125) DEFAULT NULL,
+  `comments_copy` text NOT NULL,
+  `comments_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `comments_movie` int(11) NOT NULL,
+  `comments_rating` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_kcomments`
+--
+
+INSERT INTO `tbl_kcomments` (`comments_id`, `comments_auth`, `comments_copy`, `comments_date`, `comments_movie`, `comments_rating`) VALUES
+(1, NULL, 'Not liking', '2018-04-24 15:37:21', 6, 2);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_kids`
 --
 
@@ -157,17 +184,17 @@ CREATE TABLE `tbl_kids` (
 --
 
 INSERT INTO `tbl_kids` (`kids_id`, `kids_title`, `kids_images`, `kids_year`, `kids_run`, `kids_videos`, `kids_desc`) VALUES
-(1, 'A Wrinkle in Time', 'images/awrinkleintime.jpg', 2018, '1h 49m', 'videokids/awrinkleintime.mp4', '\r\nFollowing the discovery of a new form of space travel as well as Meg\'s father\'s disappearance, she, her brother, and her friend must join three magical beings - Mrs. Whatsit, Mrs. Who, and Mrs. Which - to travel across the universe to rescue him from a terrible evil.'),
-(2, 'Coco', 'images/coco.jpg', 2017, '1h 45m', 'videokids/coco.mp4', 'Despite his family\'s baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events. Along the way, he meets charming trickster Hector, and together, they set off on an extraordinary journey to unlock the real story behind Miguel\'s family history.'),
-(3, 'Kubo and the Two Strings', 'images/kubo.jpg', 2016, '1h 41m', 'videokids/kubo.mp4', 'Kubo lives a quiet, normal life in a small shoreside village until a spirit from the past turns his life upside down by re-igniting an age-old vendetta. This causes all sorts of havoc as gods and monsters chase Kubo who, in order to survive, must locate a magical suit of armor once worn by his late father, a legendary Samurai warrior.'),
-(4, 'Miss Granny', 'images/missgranny.jpg', 2014, '2h 4m', 'videokids/missgranny.mp4', 'A 74-year-old widow realizes she is becoming a burden on her family. She mysteriously regains her physical appearance from the age of 20.'),
-(5, 'Moana', 'images/moana.jpg', 2016, '1h 47m', 'videokids/moana.mp4', 'Moana Waialiki is a sea voyaging enthusiast and the only daughter of a chief in a long line of navigators. When her island\'s fishermen can\'t catch any fish and the crops fail, she learns that the demigod Maui caused the blight by stealing the heart of the goddess, Te Fiti. The only way to heal the island is to persuade Maui to return Te Fiti\'s heart, so Moana sets off on an epic journey across the Pacific. The film is based on stories from Polynesian mythology.'),
-(6, 'Stand By Me, Doraemon', 'images/standbyme.jpg', 2014, '1h 35m', 'videokids/standbyme.mp4', 'In the suburbs of Tokyo some time ago, there lived a clumsy boy about 10 years old. There appeared in front of him named Sewashi, Nobita\'s descendant of four generations later from the 22nd century, and Doraemon, a 22nd century cat-type caretaker robot who helps people with its secret gadgets.'),
-(7, 'Teiichi : Battle of Supreme High', 'images/teiichibattleofsupremehigh.jpg', 2017, '1h 58m', 'videokids/teiichibattleofsupremehigh.mp4', 'Teiichi dreams of one day being the ruler of his own empire, but to get there he needs to make sure that his candidate for class president at his elite high school wins the election. This is a high school election fought with all the fervor or a nasty, national campaign. Lies, bribery, sabotage and scandal all come into play as the boys fight it out to determine who will be the next class president.'),
-(8, 'Time Trip App ', 'images/timetripapp.jpg', 2014, '1h 48m', 'videokids/timetripapp.mp4', 'In 1868, a battle between new government forces and shogunate forces are about to take place in Edo. Katsu Kaishu (Hiroshi Tamaki) wants to avoid useless bloodshed and sends a peace envoy to Takamori Saigo, but Katsu Kaishu is unable to get a response from Takamori Saigo. One day, Katsu Kaishu meets high school teacher Mikako (Satomi Ishihara) and her student Masaya who is captivated by the shogunate.'),
-(9, 'My Neighbour Totoro', 'images/totoro.jpg', 1988, '1h 26m', 'videokids/totoro.mp4', 'Two young girls, Satsuki and her younger sister Mei, move into a house in the country with their father to be closer to their hospitalized mother. Satsuki and Mei discover that the nearby forest is inhabited by magical creatures called Totoros (pronounced toe-toe-ro). They soon befriend these Totoros, and have several magical adventures.'),
-(10, 'WALL-E', 'images/walle.jpg', 2008, '1h 38m', 'videokids/walle.mp4', 'In a distant, but not so unrealistic, future where mankind has abandoned earth because it has become covered with trash from products sold by the powerful multi-national Buy N Large corporation, WALL-E, a garbage collecting robot has been left to clean up the mess. '),
-(11, 'A Tale of Mari and the Three Puppies', 'images/ataleofmariandthreepuppies.jpg', 2007, '2h 4m', 'videokids/ataleofmariandthreepuppies.png', 'A tale of Mari and three puppies is based on a true story. It tells about the situation Mari and her puppies have gone through after a massive destruction brought by an earthquake that striked Japan in October 23, 2004.');
+(1, 'A Wrinkle in Time', 'awrinkleintime.jpg', 2018, '1h 49m', 'awrinkleintime.mp4', '\r\nFollowing the discovery of a new form of space travel as well as Meg\'s father\'s disappearance, she, her brother, and her friend must join three magical beings - Mrs. Whatsit, Mrs. Who, and Mrs. Which - to travel across the universe to rescue him from a terrible evil.'),
+(2, 'Coco', 'coco.jpg', 2017, '1h 45m', 'coco.mp4', 'Despite his family\'s baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events. Along the way, he meets charming trickster Hector, and together, they set off on an extraordinary journey to unlock the real story behind Miguel\'s family history.'),
+(3, 'Kubo and the Two Strings', 'kubo.jpg', 2016, '1h 41m', 'kubo.mp4', 'Kubo lives a quiet, normal life in a small shoreside village until a spirit from the past turns his life upside down by re-igniting an age-old vendetta. This causes all sorts of havoc as gods and monsters chase Kubo who, in order to survive, must locate a magical suit of armor once worn by his late father, a legendary Samurai warrior.'),
+(4, 'Miss Granny', 'missgranny.jpg', 2014, '2h 4m', 'missgranny.mp4', 'A 74-year-old widow realizes she is becoming a burden on her family. She mysteriously regains her physical appearance from the age of 20.'),
+(5, 'Moana', 'moana.jpg', 2016, '1h 47m', 'moana.mp4', 'Moana Waialiki is a sea voyaging enthusiast and the only daughter of a chief in a long line of navigators. When her island\'s fishermen can\'t catch any fish and the crops fail, she learns that the demigod Maui caused the blight by stealing the heart of the goddess, Te Fiti. The only way to heal the island is to persuade Maui to return Te Fiti\'s heart, so Moana sets off on an epic journey across the Pacific. The film is based on stories from Polynesian mythology.'),
+(6, 'Stand By Me, Doraemon', 'standbyme.jpg', 2014, '1h 35m', 'standbyme.mp4', 'In the suburbs of Tokyo some time ago, there lived a clumsy boy about 10 years old. There appeared in front of him named Sewashi, Nobita\'s descendant of four generations later from the 22nd century, and Doraemon, a 22nd century cat-type caretaker robot who helps people with its secret gadgets.'),
+(7, 'Teiichi : Battle of Supreme High', 'teiichibattleofsupremehigh.jpg', 2017, '1h 58m', 'teiichibattleofsupremehigh.mp4', 'Teiichi dreams of one day being the ruler of his own empire, but to get there he needs to make sure that his candidate for class president at his elite high school wins the election. This is a high school election fought with all the fervor or a nasty, national campaign. Lies, bribery, sabotage and scandal all come into play as the boys fight it out to determine who will be the next class president.'),
+(8, 'Time Trip App ', 'timetripapp.jpg', 2014, '1h 48m', 'timetripapp.mp4', 'In 1868, a battle between new government forces and shogunate forces are about to take place in Edo. Katsu Kaishu (Hiroshi Tamaki) wants to avoid useless bloodshed and sends a peace envoy to Takamori Saigo, but Katsu Kaishu is unable to get a response from Takamori Saigo. One day, Katsu Kaishu meets high school teacher Mikako (Satomi Ishihara) and her student Masaya who is captivated by the shogunate.'),
+(9, 'My Neighbour Totoro', 'totoro.jpg', 1988, '1h 26m', 'totoro.mp4', 'Two young girls, Satsuki and her younger sister Mei, move into a house in the country with their father to be closer to their hospitalized mother. Satsuki and Mei discover that the nearby forest is inhabited by magical creatures called Totoros (pronounced toe-toe-ro). They soon befriend these Totoros, and have several magical adventures.'),
+(10, 'WALL-E', 'walle.jpg', 2008, '1h 38m', 'walle.mp4', 'In a distant, but not so unrealistic, future where mankind has abandoned earth because it has become covered with trash from products sold by the powerful multi-national Buy N Large corporation, WALL-E, a garbage collecting robot has been left to clean up the mess. '),
+(11, 'A Tale of Mari and the Three Puppies', 'ataleofmariandthreepuppies.jpg', 2007, '2h 4m', 'ataleofmariandthreepuppies.png', 'A tale of Mari and three puppies is based on a true story. It tells about the situation Mari and her puppies have gone through after a massive destruction brought by an earthquake that striked Japan in October 23, 2004.');
 
 -- --------------------------------------------------------
 
@@ -482,6 +509,12 @@ ALTER TABLE `tbl_genre`
   ADD PRIMARY KEY (`genre_id`);
 
 --
+-- Indexes for table `tbl_kcomments`
+--
+ALTER TABLE `tbl_kcomments`
+  ADD PRIMARY KEY (`comments_id`);
+
+--
 -- Indexes for table `tbl_kids`
 --
 ALTER TABLE `tbl_kids`
@@ -549,7 +582,7 @@ ALTER TABLE `par_mpaa`
 -- AUTO_INCREMENT for table `tbl_comments`
 --
 ALTER TABLE `tbl_comments`
-  MODIFY `comments_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `comments_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `tbl_director`
@@ -562,6 +595,12 @@ ALTER TABLE `tbl_director`
 --
 ALTER TABLE `tbl_genre`
   MODIFY `genre_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `tbl_kcomments`
+--
+ALTER TABLE `tbl_kcomments`
+  MODIFY `comments_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_kids`
