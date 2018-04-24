@@ -1,13 +1,33 @@
+<section id="app" class="parentsUI">
+  <div>
+    <h2>{{ greeting }}</h2>
+      <p>{{intro}}</p>
+    <aside>
+      <h4>{{ defaultMovie.parents_title }}</h4>
+      <span>
+        {{ defaultMovie.parents_year }} &nbsp;&bull;&nbsp; {{ defaultMovie.parents_run }}
+      </span>
+      <br>
+      <i> {{ defaultMovie.genre_name }}</i>
+    </aside>
 
-<div class="parentsUI">
-  <h2>{{ title }}</h2>
-    <p>{{intro}}</p>
-    <div class="movieList">
-
-    {{#each parents}}
-    <a href="/videos/{{parents_id}}">
-    <img class="pImg" src="{{parents_images}}" alt=""></a>
-    {{/each}}
-
+    <video autoplay controls>
+      <source src="/videoparents/{{ defaultMovie.parents_videos }}" type="video/mp4">
+    </video>
+    <p>{{defaultMovie.parents_desc}}</p>
   </div>
-</div>
+
+  <!-- load in all of the thumnails for each genre -->
+  <section class="genre-lists" v-for="genre in genres">
+    <div v-if="genre.parents.length > 0">
+      <div class="genre-item">
+        <h6 class="genre-name">${ genre.name }</h6>
+        <div class="movie-list" v-for="parent in genre.parents">
+          <a :href="'/videos/' + parent.parents_id + '/' + parent.parents_videos">
+            <img class="movie-thumb" :src="'/images/' + parent.parents_images" :alt="parent.parents_title">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

@@ -1,20 +1,92 @@
-<div class="kidsUI">
+<div id="kapp" class="kidsUI">
 <div class="selectEnt">
   <ul>
     <li><a href="#"> <img src="/images/assets/kmovie.png" alt=""> </a></li>
     <li><a href="#"> <img src="/images/assets/ktv.png" alt=""> </a></li>
     <li>  <a href="#"> <img src="/images/assets/kmusic.png" alt=""> </a></li>
-  </ul>  
+  </ul>
 </div>
+    <div class="kmoviesList">
+      <h2>{{ greeting }}</h2>
+        <p>{{intro}}</p>
+      <aside>
+        <h4>{{ defaultMovie.kids_title }}</h4>
+        <span>
+          {{ defaultMovie.kids_year }} &nbsp;&bull;&nbsp; {{ defaultMovie.kids_run }}
+        </span>
+        <br>
+        <i> {{ defaultMovie.genre_name }}</i>
+      </aside>
 
-  <h2>{{ title }}</h2>
-    <p>{{intro}}</p>
-    <div class="kmovieList">
-      {{#each kids}}
-      <a href="/kidsvideos/{{kids_id}}">
-      <img class="kImg" src="{{kids_images}}" alt=""></a>
-      {{/each}}
-</div>
+      <video autoplay controls>
+        <source src="/videokids/{{ defaultMovie.kids_videos }}" type="video/mp4">
+      </video>
+      <p>{{defaultMovie.kids_desc}}</p>
+    </div>
+    <!-- add the reviews -->
+    <article class="comments" v-if="reviews.length > 0">
+      <div v-for="review in reviews">
+        <!-- temporary vue component -->
+          <review-stars :value="review.comments_rating" :disabled="true"></review-stars>
+        <!-- end component -->
+        <i class="post-date">${ review.comments_date }</i>
+        <p>
+          ${ review.comments_copy }
+        </p>
+      </div>
+    </article>
+
+    <aside class="add-comment" :class="{floatRight : reviews.length > 0}">
+      <h4 class="review-heading">Add a review</h4>
+      <span class="hidden movId">{{ movie }}</span>
+        <review-stars v-model="numStars" :disabled="false"></review-stars>
+      <textarea name="review" id="review" placeholder="what did you think?" v-model="review"></textarea>
+      <input type="submit" value="Submit your review" v-on:click="addReview">
+    </aside>
+    </section>
+
+    <div id="sm">
+    <social-sharing url="{{window.location.href}}"
+                                title="The new and latest Roku"
+                                description="Best way to watch all movies, tv shows and music videos."
+                                quote="Ease of access, anywhere and everywhere."
+                                hashtags="roku,flashback,movies,videos,tvshows"
+                                twitter-user="Roku"
+                                facebookurl="{{url}}"
+                                :networks="overriddenNetworks"
+                                v-cloak inline-template>
+          <ul>
+            <li>
+              <network network="facebook" id="facebook">
+                <i class="fab fa-facebook"></i>
+              </network>
+            </li>
+            <li>
+              <network network="twitter" id="twitter">
+                <i class="fab fa-twitter-square"></i>
+              </network>
+            </li>
+            <li>
+              <network network="googleplus" id="googleplus">
+                <i class="fab fa-google-plus-square"></i>
+              </network>
+            </li>
+
+            <li>
+                <network network="whatsapp" id="whatsapp">
+    <i class="fab fa-whatsapp-square"></i>
+                </network>
+              </li>
+              <li>
+                          <network network="instagram" id="instagram">
+    <i class="fab fa-instagram"></i>                      </network>
+                        </li>
+          </ul>
+        </social-sharing>
+    </div>
+    </section>
+
+
 <div class="otherCat">
   <a href="#"> <img src="/images/assets/comedy.png" alt=""> </a>
   <a href="#"> <img src="/images/assets/adventure.png" alt=""> </a>

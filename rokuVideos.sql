@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 22, 2018 at 09:18 PM
+-- Generation Time: Apr 24, 2018 at 02:02 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -31,6 +31,40 @@ CREATE TABLE `par_mpaa` (
   `parents_id` int(11) NOT NULL,
   `mpaa_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_comments`
+--
+
+CREATE TABLE `tbl_comments` (
+  `comments_id` int(10) UNSIGNED NOT NULL,
+  `comments_auth` varchar(125) DEFAULT NULL,
+  `comments_copy` text NOT NULL,
+  `comments_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `comments_movie` int(11) NOT NULL,
+  `comments_rating` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_comments`
+--
+
+INSERT INTO `tbl_comments` (`comments_id`, `comments_auth`, `comments_copy`, `comments_date`, `comments_movie`, `comments_rating`) VALUES
+(1, NULL, 'Loved it. Chris Pratt is my hero! I LOVE YOU STAR LORD!!', '2018-03-26 19:08:41', 1, 5),
+(2, NULL, 'Not quite as good as the first Guardians, but still WAY better that any DC movie... ', '2018-03-26 19:09:57', 1, 4),
+(3, NULL, 'It sucked.', '2018-04-01 14:54:32', 1, 1),
+(4, NULL, 'It was amazing. I really liked this way better than any DC movie that\'s ever been made, EVER.\n\nCuz DC movies are garbage.', '2018-04-01 14:55:29', 1, 3),
+(5, NULL, 'I thought Logan was great.THIS is the way you do comic book dystopia.', '2018-04-01 14:56:55', 3, 4),
+(6, NULL, 'Way too violent. I thought Hugh Jackman would at least do a song and dance, but was VERY disappointed.', '2018-04-01 14:57:35', 3, 1),
+(7, NULL, 'OMG i can\'t get enough Deadpool.. what a great movie', '2018-04-01 15:11:30', 7, 5),
+(8, NULL, 'I really liked this. Prof X made me sad tho. What a way to go...', '2018-04-01 15:51:58', 3, 4),
+(9, NULL, 'Amazing', '2018-04-19 23:12:10', 2, 4),
+(10, NULL, 'NOOOOOOO', '2018-04-23 21:54:58', 1, 3),
+(11, NULL, 'NOOOOOOOOO ', '2018-04-23 21:56:22', 1, 3),
+(12, NULL, 'yessss', '2018-04-23 22:02:51', 1, 4),
+(13, NULL, 'lkiinefdrgrd', '2018-04-23 22:27:37', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -297,17 +331,17 @@ CREATE TABLE `tbl_parents` (
 --
 
 INSERT INTO `tbl_parents` (`parents_id`, `parents_title`, `parents_images`, `parents_year`, `parents_run`, `parents_videos`, `parents_desc`) VALUES
-(1, 'Black Panther', 'images/blackpanther.jpg', 2018, '2h 14m', 'videoparents/blackpanther.mp4', 'After the events of Captain America: Civil War, King T\'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country\'s new leader. However, T\'Challa soon finds that he is challenged for the throne from factions within his own country.'),
-(2, 'Bad Genius', 'images/badgenius.jpg', 2017, '2h 10m', 'videoparents/badgenius.mp4', 'Lynn, a genius high school student who makes money by cheating tests, receives a new task that leads her to set foot on Sydney, Australia. In order to complete the millions-Baht task, Lynn and her classmates have to finish the international STIC(SAT) exam and deliver the answers back to her friends in Thailand before the exam takes place once again in her home country.'),
-(3, 'Blade Runner 2049', 'images/bladerunner.jpg', 2017, '2h 44m', 'videoparents/bladerunner.mp4', 'Thirty years after the events of the first film, a new blade runner, LAPD Officer K (Ryan Gosling), unearths a long-buried secret that has the potential to plunge what\'s left of society into chaos. K\'s discovery leads him on a quest to find Rick Deckard (Harrison Ford), a former LAPD blade runner who has been missing for 30 years.'),
-(5, 'Co Ba Sai Gon', 'images/cobasaigon.jpg', 2017, '1h 40m', 'videoparents/cobasaigon.mp4', 'The re-enactment of a long dress era in the 1960s is thought to be the heyday of traditional Vietnamese costumes. Interwoven into that transformation in the style and style of the ao dai in modern times are told through the story of the character of Ba. '),
-(6, 'Dunkirk', 'images/dunkirk.jpg', 2017, '1h 46m', 'videoparents/dunkirk.mp4', 'Evacuation of Allied soldiers from the British Empire, and France, who were cut off and surrounded by the German army from the beaches and harbor of Dunkirk, France, between May 26- June 04, 1940, during Battle of France in World War II. '),
-(7, 'Seondal : The Man Who Sells the River', 'images/kimseondal.jpg', 2016, '2h', 'videoparents/kimseondal.mp4', 'In-hong is drafted into the army by force to fight in China during the Qing Dynasty. During the struggle to survive in the battlefield, he meets Bo-won and Gyeon. Three men return to Korea to find no means to make living, and decide to form a con ring. Their cons range from selling a chicken as phoenix and disguising an ordinary sword as one that belonged to the great Admiral Yi Shun-shin. '),
-(8, 'Kokuhaku (Confessions)', 'images/kokuhaku.jpg', 2010, '1h 46m', 'videoparents/kokuhaku.mp4', 'A psychological thriller of a grieving mother turned cold-blooded avenger with a twisty master plan to pay back those who were responsible for her daughter\'s death.'),
-(9, 'Parasyte Part 1', 'images/parasyte.jpg', 2014, '1h 49m', 'videoparents/parasyte.mp4', 'The humanity is suffering from murders all over the globe, called \"Mincemeat murders\". High school student, Izumi Shinichi has a parasite living off him, having replaced his right hand, and he might be the discoverer of truth.'),
-(10, 'Star Wars : The Last Jedi', 'images/starwarsthelastjedi.jpg', 2017, '2h 32m', 'videoparents/starwarsthelastjedi.mp4', 'Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.'),
-(11, 'The Chase ', 'images/thechase.jpg', 2017, '1h 50m', 'videoparents/thechase.mp4', 'Sim Deok-soo is a grumpy landlord running a run-down apartment complex. Suddenly his tenants begin disappearing under suspicious circumstances. A retired ex-detective shows up, claiming a serial murderer from 30 years back has returned.'),
-(12, 'The Greatest Showman', 'images/thegreatestshowman.jpg', 2017, '1h 45m', 'videoparents/thegreatestshowman.mp4', 'Orphaned, penniless but ambitious and with a mind crammed with imagination and fresh ideas, the American Phineas Taylor Barnum will always be remembered as the man with the gift to effortlessly blur the line between reality and fiction. ');
+(1, 'Black Panther', 'blackpanther.jpg', 2018, '2h 14m', 'blackpanther.mp4', 'After the events of Captain America: Civil War, King T\'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country\'s new leader. However, T\'Challa soon finds that he is challenged for the throne from factions within his own country.'),
+(2, 'Bad Genius', 'badgenius.jpg', 2017, '2h 10m', 'badgenius.mp4', 'Lynn, a genius high school student who makes money by cheating tests, receives a new task that leads her to set foot on Sydney, Australia. In order to complete the millions-Baht task, Lynn and her classmates have to finish the international STIC(SAT) exam and deliver the answers back to her friends in Thailand before the exam takes place once again in her home country.'),
+(3, 'Blade Runner 2049', 'bladerunner.jpg', 2017, '2h 44m', 'bladerunner.mp4', 'Thirty years after the events of the first film, a new blade runner, LAPD Officer K (Ryan Gosling), unearths a long-buried secret that has the potential to plunge what\'s left of society into chaos. K\'s discovery leads him on a quest to find Rick Deckard (Harrison Ford), a former LAPD blade runner who has been missing for 30 years.'),
+(5, 'Co Ba Sai Gon', 'cobasaigon.jpg', 2017, '1h 40m', 'cobasaigon.mp4', 'The re-enactment of a long dress era in the 1960s is thought to be the heyday of traditional Vietnamese costumes. Interwoven into that transformation in the style and style of the ao dai in modern times are told through the story of the character of Ba. '),
+(6, 'Dunkirk', 'dunkirk.jpg', 2017, '1h 46m', 'dunkirk.mp4', 'Evacuation of Allied soldiers from the British Empire, and France, who were cut off and surrounded by the German army from the beaches and harbor of Dunkirk, France, between May 26- June 04, 1940, during Battle of France in World War II. '),
+(7, 'Seondal : The Man Who Sells the River', 'kimseondal.jpg', 2016, '2h', 'kimseondal.mp4', 'In-hong is drafted into the army by force to fight in China during the Qing Dynasty. During the struggle to survive in the battlefield, he meets Bo-won and Gyeon. Three men return to Korea to find no means to make living, and decide to form a con ring. Their cons range from selling a chicken as phoenix and disguising an ordinary sword as one that belonged to the great Admiral Yi Shun-shin. '),
+(8, 'Kokuhaku (Confessions)', 'kokuhaku.jpg', 2010, '1h 46m', 'kokuhaku.mp4', 'A psychological thriller of a grieving mother turned cold-blooded avenger with a twisty master plan to pay back those who were responsible for her daughter\'s death.'),
+(9, 'Parasyte Part 1', 'parasyte.jpg', 2014, '1h 49m', 'parasyte.mp4', 'The humanity is suffering from murders all over the globe, called \"Mincemeat murders\". High school student, Izumi Shinichi has a parasite living off him, having replaced his right hand, and he might be the discoverer of truth.'),
+(10, 'Star Wars : The Last Jedi', 'starwarsthelastjedi.jpg', 2017, '2h 32m', 'starwarsthelastjedi.mp4', 'Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.'),
+(11, 'The Chase ', 'thechase.jpg', 2017, '1h 50m', 'thechase.mp4', 'Sim Deok-soo is a grumpy landlord running a run-down apartment complex. Suddenly his tenants begin disappearing under suspicious circumstances. A retired ex-detective shows up, claiming a serial murderer from 30 years back has returned.'),
+(12, 'The Greatest Showman', 'thegreatestshowman.jpg', 2017, '1h 45m', 'thegreatestshowman.mp4', 'Orphaned, penniless but ambitious and with a mind crammed with imagination and fresh ideas, the American Phineas Taylor Barnum will always be remembered as the man with the gift to effortlessly blur the line between reality and fiction. ');
 
 -- --------------------------------------------------------
 
@@ -430,6 +464,12 @@ ALTER TABLE `par_mpaa`
   ADD PRIMARY KEY (`par_mpaa_id`);
 
 --
+-- Indexes for table `tbl_comments`
+--
+ALTER TABLE `tbl_comments`
+  ADD PRIMARY KEY (`comments_id`);
+
+--
 -- Indexes for table `tbl_director`
 --
 ALTER TABLE `tbl_director`
@@ -504,6 +544,12 @@ ALTER TABLE `tbl_par_director`
 --
 ALTER TABLE `par_mpaa`
   MODIFY `par_mpaa_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_comments`
+--
+ALTER TABLE `tbl_comments`
+  MODIFY `comments_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tbl_director`
